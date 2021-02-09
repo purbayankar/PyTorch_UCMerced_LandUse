@@ -141,8 +141,8 @@ def test(epoch):
             'acc': acc,
             'epoch': epoch,
         }
-        if not os.path.isdir('/storage/users/jgecvision/Swalpa/UCMerced/PyTorch_UCMerced_LandUse/checkpoint/' + model_name):
-            os.mkdir('/storage/users/jgecvision/Swalpa/UCMerced/PyTorch_UCMerced_LandUse/checkpoint/' + model_name)
+        if not os.path.isdir('checkpoint/' + model_name):
+            os.mkdir('checkpoint/' + model_name)
         torch.save(state, './checkpoint/' + model_name + '/ckpt.pth')
         best_acc = acc
         print('Acc > best_acc, Saving net, acc')
